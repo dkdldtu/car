@@ -740,3 +740,21 @@ th { background: #f8fafc; }
   .brand-logo { width: 128px; height: 30px; }
   .phone-link strong { font-size: 11px; }
 }
+
+
+/* Rounded header logo corners */
+.logo-brand {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.brand-logo {
+  border-radius: 14px;
+}
+@media (max-width: 720px) {
+  .logo-brand { border-radius: 13px; }
+  .brand-logo { border-radius: 12px; }
+}
+@media (max-width: 460px) {
+  .logo-brand { border-radius: 12px; }
+  .brand-logo { border-radius: 11px; }
+}
