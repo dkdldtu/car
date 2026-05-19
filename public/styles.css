@@ -639,3 +639,245 @@ th { background: #f8fafc; }
 }
 .fleet-card, .about-info-card div, .info-list div { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .hero-visual, .form-card, .contact-card, .map-wrap, .reservation-info { backdrop-filter: blur(6px); }
+
+/* Mobile layout optimization */
+@media (max-width: 860px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+  .nav { display: none !important; }
+  .nav-wrap {
+    height: auto !important;
+    min-height: 64px;
+    padding: 8px 0;
+    gap: 10px;
+    flex-wrap: nowrap !important;
+  }
+  .logo-brand {
+    max-width: 58%;
+    padding: 3px 8px !important;
+    border-radius: 14px !important;
+  }
+  .brand-logo {
+    width: min(198px, 46vw) !important;
+    height: 44px !important;
+    object-fit: contain;
+  }
+  .header-right {
+    width: auto !important;
+    margin-left: auto;
+    flex: 0 0 auto;
+    justify-content: flex-end !important;
+  }
+  .phone-link {
+    width: auto !important;
+    min-width: 126px;
+    min-height: 42px !important;
+    padding: 6px 10px !important;
+    border-radius: 14px !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .phone-link span { font-size: 10px !important; }
+  .phone-link strong {
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .container { width: min(100% - 22px, 1120px) !important; }
+  .hero {
+    padding: 30px 0 24px !important;
+  }
+  .hero-grid {
+    gap: 22px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 10vw, 42px);
+    line-height: 1.12;
+  }
+  .hero-text {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .hero-actions {
+    margin-top: 20px;
+    gap: 9px;
+  }
+  .hero-actions .btn {
+    flex: 1 1 140px;
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+  .hero-visual,
+  .hero-visual img {
+    min-height: 260px !important;
+    height: 260px !important;
+    border-radius: 24px;
+  }
+  .hero-card {
+    min-width: 0 !important;
+    width: calc(50% - 16px);
+    padding: 10px 11px;
+    border-radius: 14px;
+  }
+  .hero-card span {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .hero-card strong {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .hero-card-bottom { left: 12px; bottom: 12px; }
+  .hero-card-price { right: 12px; bottom: 12px; }
+
+  .section { padding: 42px 0 !important; }
+  .section h2 { font-size: clamp(26px, 8vw, 34px); }
+  .section p { font-size: 15px; line-height: 1.65; }
+  .section-head-row { gap: 12px; margin-bottom: 18px; }
+  .section-head-row p:last-child { font-size: 14px; }
+  .about-info-card div,
+  .reservation-info,
+  .form-card,
+  .contact-card { padding: 18px; border-radius: 22px; }
+  .about-info-card strong,
+  .reservation-summary strong,
+  .info-list strong { font-size: 15px; overflow-wrap: anywhere; }
+  .fleet-grid,
+  .five-cards { gap: 14px; }
+  .fleet-card { border-radius: 22px; }
+  .fleet-card img {
+    height: 170px !important;
+    padding: 8px;
+  }
+  .fleet-card div { padding: 16px; }
+  .fleet-card h3 { font-size: 21px; }
+  .fleet-card p { min-height: 0; font-size: 14px; }
+  .fleet-card strong { font-size: 24px; margin-top: 10px; }
+
+  .reservation-grid { gap: 18px; }
+  .reservation-summary { gap: 9px; margin-top: 18px; }
+  .reservation-summary div { padding: 12px 13px; }
+  input, select, textarea {
+    font-size: 16px;
+    padding: 13px 14px;
+    border-radius: 13px;
+  }
+  .contact-grid { gap: 16px; }
+  .contact-actions .btn {
+    flex: 1 1 130px;
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+  .call-box {
+    grid-template-columns: 42px 1fr !important;
+    gap: 12px;
+    margin-top: 18px;
+    padding: 14px !important;
+    border-radius: 18px;
+  }
+  .call-icon {
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 14px !important;
+    font-size: 19px !important;
+  }
+  .call-box a {
+    font-size: clamp(20px, 6vw, 24px) !important;
+    white-space: nowrap;
+  }
+  .call-box p { font-size: 13px; }
+  .map-wrap { min-height: 300px; border-radius: 22px; }
+  .map-wrap iframe { min-height: 300px; }
+  .footer-wrap {
+    gap: 6px;
+    min-height: auto;
+    padding: 18px 0 !important;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container { width: min(100% - 18px, 1120px) !important; }
+  .nav-wrap {
+    min-height: 60px;
+    padding: 7px 0;
+  }
+  .logo-brand {
+    max-width: 55%;
+    padding: 2px 6px !important;
+    border-radius: 12px !important;
+  }
+  .brand-logo {
+    width: 100% !important;
+    max-width: 168px;
+    height: 36px !important;
+    object-position: left center !important;
+  }
+  .phone-link {
+    min-width: 112px;
+    min-height: 38px !important;
+    padding: 5px 8px !important;
+    border-radius: 12px !important;
+  }
+  .phone-link span { font-size: 9px !important; }
+  .phone-link strong { font-size: 12px !important; }
+  .eyebrow, .section-label {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+  .hero h1 { font-size: 31px; }
+  .hero-visual,
+  .hero-visual img {
+    min-height: 230px !important;
+    height: 230px !important;
+  }
+  .hero-card {
+    width: calc(50% - 13px);
+    padding: 8px 9px;
+  }
+  .hero-card span { font-size: 10px; }
+  .hero-card strong { font-size: 13px; }
+  .about-modern,
+  .reservation-grid,
+  .contact-grid { gap: 14px; }
+  .form-card,
+  .reservation-info,
+  .contact-card { padding: 16px; }
+  .info-list { gap: 9px; margin-top: 18px; }
+  .info-list div { padding: 12px 13px; }
+  .call-box a { font-size: 20px !important; }
+}
+
+@media (max-width: 360px) {
+  .brand-logo { max-width: 148px; height: 34px !important; }
+  .phone-link { min-width: 102px; padding: 5px 6px !important; }
+  .phone-link span { display: none; }
+  .phone-link strong { font-size: 11px !important; }
+  .hero-actions .btn { flex-basis: 100%; }
+  .hero-card {
+    position: static;
+    width: auto;
+    margin: 8px 8px 0;
+  }
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    min-height: 0 !important;
+    background: white;
+  }
+  .hero-visual img {
+    height: 205px !important;
+    min-height: 205px !important;
+  }
+  .hero-visual::before { display: none; }
+  .hero-card-price { margin-bottom: 8px; }
+}
